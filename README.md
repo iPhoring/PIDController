@@ -3,6 +3,10 @@
 
 ---
 ### Goals
+https://youtu.be/n1RdWRtQgYs
+
+
+https://youtu.be/BVALgxNa6v0
 
 ## Basic Build Instructions
 
