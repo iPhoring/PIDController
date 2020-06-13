@@ -141,7 +141,6 @@ int main(void){
         std::cerr << "Failed to listen to port" << std::endl; 
         return -1;
     }
-
     h.run();
     return 0; //returing main
 } // end of main
