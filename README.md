@@ -35,6 +35,8 @@ The inital values selected for Kp,Ki,Kd are
 ### Twiddle
 An algorithm that is used to optimized the parameters. This was designed by Sebastian Thrun, Udacity. Please see the below video https://www.youtube.com/watch?v=2uQ2BSzDvXs
 
+![image2](images/Image2.png)
+
 I added a new member function to PID controller for Twiddler. The main.cpp is altered to integrate the Twiddle algorithm. The main.cpp run the Twiddle 4 times to find the optimized value. It also controls the timestep/frames before accepting the CTE. The main.cpp also implements a second Twiddle to control the car speed based on difference between the set point speed and current speed. This allows the car to make a safe run around the track. The steering Twiddle turns itself off after running it for 4 times.
 
 Final optimized values are 
