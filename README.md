@@ -11,26 +11,28 @@ The udacity's car simulator provides the cross track error (CTE) and the velocit
 
 ![image1](images/Image0.png "Udacity Simiulator")
 
-#### CTE: is the cross track error flowing into the controller from our car sensors.
-#### Kp, Ki, and Kd are P, I, and D parameters.
-#### p_error, i_error, and d_error are proportional, integral and derivative components’ errors respectively.
+#### CTE: The cross track error flowing into the PID controller from sensors.
+#### Kp, Ki, and Kd are Proportional, Integral and Derivative parameters respectively.
+#### p_error, i_error, and d_error are proportional, integral and derivative error components respectively.
 
 ### Desgin and Implementation
-Initial values of PID are imperically found by running the car and manually observing the behavior. The approach for finding the values is:
+Initial values of PID are imperically found by running the car and observing the behavior. The approach for finding the values is:
 
-1. First step is to set Ki and Kd values to zero, and only use Kp value until we reach a managable oscillation i.e. car oscillates but stays within the lane for majority of track.
+1. First step is to set Ki and Kd values to zero, and only use Kp value until we reach a managable oscillation i.e. car oscillates but stays within the lane for majority of the track.
 
 [![PID Controller with accepted Kp value](images/Image1.png)](https://youtu.be/BVALgxNa6v0)
 
 
-2. Second step is to find the Kd(Derivative) value to stop the oscillation.
+2. Second step is to find the Kd(Derivative) value to minimize the oscillation so that cars stays within the lane.
 
 3. Third step is to find a good Ki value to reduce the steady-state error.
 
 The initial values selected for Kp,Ki,Kd are [0.08,0.0005,7.5] respectively.
 
 ### Optimization using Twiddle
-In order to further optimize the initial PID values, an algorithm named Twiddle is used.  This was designed by Sebastian Thrun, Udacity. Please see the below video
+In order to further optimize the initial PID values, an algorithm named Twiddle is used.  This was designed by Dr. Sebastian Thrun, Udacity. 
+
+Please see the below video for details.
 
 [![Twiddler by Sebastian Thrun, Udacity](images/Image3.png)](https://www.youtube.com/watch?v=2uQ2BSzDvXs)
 
