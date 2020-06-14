@@ -1,11 +1,20 @@
 # PID Controller
+
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
 ---
 ### Goals
 The project goal is to build a Proportional-Integral-Derivative (PID) control for driving the autonomous car around a predefined track. PID is the most common control algorithm used in industry and has been universally accepted in industrial control.
 PID algorithm consists of three basic coefficients; proportional, integral and derivative which are varied to get optimal response.
+### Environment
+The udacity's car simulator provides the cross track error (CTE) and the velocity (mph) in order to compute the appropriate steering angle. the project goal is to use these values are build a PID controller to safely drive the car around the desgined track.
 
+#### [cte]: is the cross track error fed into the controller from a sensor.
+#### [p_error, i_error, and d_error are proportional, integral and derivative components’ errors respectively].
+Kp, Ki, and Kd are those P, I, and D parameters to be optimized.
+
+### Desgin 
+The very 1st step is to find the 
 https://youtu.be/n1RdWRtQgYs
 
 
