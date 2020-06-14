@@ -18,6 +18,8 @@ Initial valies of PID are imperically found by running the car and manully obser
 
 1. First set is to set Ki and Kd values to zero, and only use Kp value until we reach a managable oscillation i.e. car oscillates but stays with the lane for majority of track.
 Please see the selected Kp value
+[![Alt text](https://img.youtube.com/vi/VID/0.jpg)](https://youtu.be/BVALgxNa6v0)
+
 https://youtu.be/BVALgxNa6v0
 
 2. Second step is to find the Kd(Derivative) value to stop the oscillation.
