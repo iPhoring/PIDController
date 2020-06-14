@@ -3,6 +3,9 @@
 
 ---
 ### Goals
+The project goal is to build a Proportional-Integral-Derivative (PID) control for driving the autonomous car around a predefined track. PID is the most common control algorithm used in industry and has been universally accepted in industrial control.
+PID algorithm consists of three basic coefficients; proportional, integral and derivative which are varied to get optimal response.
+
 https://youtu.be/n1RdWRtQgYs
 
 
