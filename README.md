@@ -16,9 +16,10 @@ The udacity's car simulator provides the cross track error (CTE) and the velocit
 #### p_error, i_error, and d_error are proportional, integral and derivative components’ errors respectively.
 
 ### Desgin and Implementation
-Initial values of PID are imperically found by running the car and manully observing the behavior. The approach for finding the values is:
+Initial values of PID are imperically found by running the car and manually observing the behavior. The approach for finding the values is:
 
 1. First step is to set Ki and Kd values to zero, and only use Kp value until we reach a managable oscillation i.e. car oscillates but stays within the lane for majority of track.
+
 [![PID Controller with accepted Kp value](images/Image1.png)](https://youtu.be/BVALgxNa6v0)
 
 
