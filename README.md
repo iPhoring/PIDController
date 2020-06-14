@@ -46,7 +46,7 @@ I added a new member function to PID controller for Twiddler. The main.cpp is al
 
 ---
 Final Video with tuned PID controller:
-[PID Controller after Twiddle](https://youtu.be/Gte-sV17Pvg)
+[![PID Controller after Twiddle](images/Image4.png)](https://youtu.be/Gte-sV17Pvg)
 
 
 ## Basic Build Instructions
