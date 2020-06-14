@@ -20,18 +20,15 @@ The udacity's car simulator provides the cross track error (CTE) and the velocit
 Initial valies of PID are imperically found by running the car and manully observering the behavior. The approach for find the values is:
 
 1. First set is to set Ki and Kd values to zero, and only use Kp value until we reach a managable oscillation i.e. car oscillates but stays with the lane for majority of track.
-Please see the selected Kp value
 
 [PID Controller with accepted Kp value](https://youtu.be/BVALgxNa6v0)
-
 
 
 2. Second step is to find the Kd(Derivative) value to stop the oscillation.
 
 3. Third step is to find a good Ki value to reduce the steady-state error.
 
-The inital values selected for Kp,Ki,Kd are 
-[0.08,0.0005,7.5]
+The initial values selected for Kp,Ki,Kd are [0.08,0.0005,7.5]
 
 ### Twiddle
 An algorithm that is used to optimized the parameters. This was designed by Sebastian Thrun, Udacity. Please see the below video 
