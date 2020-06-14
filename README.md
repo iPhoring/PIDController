@@ -7,12 +7,10 @@
 The project goal is to build a Proportional-Integral-Derivative (PID) control for driving the autonomous car around a predefined track. PID is the most common control algorithm used in industry and has been universally accepted in industrial control.
 PID algorithm consists of three basic coefficients; proportional, integral and derivative which are varied to get optimal response.
 
-[![SC2 Video](images/Image1.png)](https://youtu.be/BVALgxNa6v0 "SC2 Mini game - Click to Watch!")
-
-![image1](images/Image1.png "PID Controller")
-
 ### Environment
 The udacity's car simulator provides the cross track error (CTE) and the velocity (mph) in order to compute the appropriate steering angle. the project goal is to use these values are build a PID controller to safely drive the car around the desgined track.
+![image1](images/Image0.png "Udacity Simiulator")
+
 
 #### CTE: is the cross track error flowing into the controller from our car sensors.
 #### Kp, Ki, and Kd are P, I, and D parameters.
@@ -22,6 +20,7 @@ The udacity's car simulator provides the cross track error (CTE) and the velocit
 Initial valies of PID are imperically found by running the car and manully observering the behavior. The approach for find the values is:
 
 1. First set is to set Ki and Kd values to zero, and only use Kp value until we reach a managable oscillation i.e. car oscillates but stays with the lane for majority of track.
+[![SC2 Video](images/Image1.png)](https://youtu.be/BVALgxNa6v0 "SC2 Mini game - Click to Watch!")
 
 [PID Controller with accepted Kp value](https://youtu.be/BVALgxNa6v0)
 
