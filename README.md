@@ -31,7 +31,7 @@ The initial values selected for Kp,Ki,Kd are [0.08,0.0005,7.5]
 
 ### Twiddle
 An algorithm that is used to optimized the parameters. This was designed by Sebastian Thrun, Udacity. Please see the below video 
-[Twiddler by Sebastian Thrun, Udacity](https://www.youtube.com/watch?v=2uQ2BSzDvXs)
+[![Twiddler by Sebastian Thrun, Udacity](images/Image3.png)](https://www.youtube.com/watch?v=2uQ2BSzDvXs)
 
 
 #### Twiddler Algorithm
