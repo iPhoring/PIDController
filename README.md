@@ -21,9 +21,10 @@ Initial valies of PID are imperically found by running the car and manully obser
 
 1. First set is to set Ki and Kd values to zero, and only use Kp value until we reach a managable oscillation i.e. car oscillates but stays with the lane for majority of track.
 Please see the selected Kp value
-[![Alt text](https://img.youtube.com/vi/VID/0.jpg)](https://youtu.be/BVALgxNa6v0)
 
-https://youtu.be/BVALgxNa6v0
+[PID Controller with accepted Kp value](https://youtu.be/BVALgxNa6v0)
+
+
 
 2. Second step is to find the Kd(Derivative) value to stop the oscillation.
 
@@ -33,23 +34,26 @@ The inital values selected for Kp,Ki,Kd are
 [0.08,0.0005,7.5]
 
 ### Twiddle
-An algorithm that is used to optimized the parameters. This was designed by Sebastian Thrun, Udacity. Please see the below video https://www.youtube.com/watch?v=2uQ2BSzDvXs
+An algorithm that is used to optimized the parameters. This was designed by Sebastian Thrun, Udacity. Please see the below video 
+[Twiddler by Sebastian Thrun, Udacity](https://www.youtube.com/watch?v=2uQ2BSzDvXs)
 
+
+#### Twiddler Algorithm
 ![image2](images/Image2.png)
 
+---
+#### Implementation and Intgration:
 I added a new member function to PID controller for Twiddler. The main.cpp is altered to integrate the Twiddle algorithm. The main.cpp run the Twiddle 4 times to find the optimized value. It also controls the timestep/frames before accepting the CTE. The main.cpp also implements a second Twiddle to control the car speed based on difference between the set point speed and current speed. This allows the car to make a safe run around the track. The steering Twiddle turns itself off after running it for 4 times.
 
-Final optimized values are 
-
-[0.09, 0.0005, 7.22648]
+### Final optimized values: [0.09, 0.0005, 7.22648]
 
 
+---
 Final Video with tuned PID controller:
 [PID Controller after Twiddle](https://youtu.be/Gte-sV17Pvg)
 
 
 ## Basic Build Instructions
-
 1. Clone this repo.
 2. Make a build directory: `mkdir build && cd build`
 3. Compile: `cmake .. && make`
