@@ -4,11 +4,10 @@
 
 ---
 ### Goals
-The project goal is to build a Proportional-Integral-Derivative (PID) control for driving the autonomous car around a predefined track. PID is the most common control algorithm used in industry and has been universally accepted in industrial control.
-PID algorithm consists of three basic coefficients; proportional, integral and derivative which are varied to get optimal response.
+The goal of the project is to build a Proportional-Integral-Derivative (PID) control for driving the autonomous car around a predefined track. PID is the most common control algorithm used in industry and has three basic coefficients; proportional, integral and derivative which are varied to get optimal response.
 
 ### Environment
-The udacity's car simulator provides the cross track error (CTE) and the velocity (mph) in order to compute the appropriate steering angle. the project goal is to use these values are build a PID controller to safely drive the car around the desgined track.
+The udacity's car simulator provides the cross track error (CTE) and the velocity (mph) in order to compute the appropriate steering angle. The goal is to use these values to build a PID controller in order to safely drive the car around the desgined track.
 
 ![image1](images/Image0.png "Udacity Simiulator")
 
@@ -16,10 +15,10 @@ The udacity's car simulator provides the cross track error (CTE) and the velocit
 #### Kp, Ki, and Kd are P, I, and D parameters.
 #### p_error, i_error, and d_error are proportional, integral and derivative components’ errors respectively.
 
-### Desgin 
-Initial valies of PID are imperically found by running the car and manully observering the behavior. The approach for find the values is:
+### Desgin and Implementation
+Initial values of PID are imperically found by running the car and manully observing the behavior. The approach for finding the values is:
 
-1. First set is to set Ki and Kd values to zero, and only use Kp value until we reach a managable oscillation i.e. car oscillates but stays with the lane for majority of track.
+1. First step is to set Ki and Kd values to zero, and only use Kp value until we reach a managable oscillation i.e. car oscillates but stays within the lane for majority of track.
 [![PID Controller with accepted Kp value](images/Image1.png)](https://youtu.be/BVALgxNa6v0)
 
 
@@ -27,19 +26,20 @@ Initial valies of PID are imperically found by running the car and manully obser
 
 3. Third step is to find a good Ki value to reduce the steady-state error.
 
-The initial values selected for Kp,Ki,Kd are [0.08,0.0005,7.5]
+The initial values selected for Kp,Ki,Kd are [0.08,0.0005,7.5] respectively.
 
-### Twiddle
-An algorithm that is used to optimized the parameters. This was designed by Sebastian Thrun, Udacity. Please see the below video 
+### Optimization using Twiddle
+In order to further optimize the initial PID values, an algorithm named Twiddle is used.  This was designed by Sebastian Thrun, Udacity. Please see the below video
+
 [![Twiddler by Sebastian Thrun, Udacity](images/Image3.png)](https://www.youtube.com/watch?v=2uQ2BSzDvXs)
 
 
-#### Twiddler Algorithm
+#### Twiddle Algorithm
 ![image2](images/Image2.png)
 
 ---
-#### Implementation and Intgration:
-I added a new member function to PID controller for Twiddler. The main.cpp is altered to integrate the Twiddle algorithm. The main.cpp run the Twiddle 4 times to find the optimized value. It also controls the timestep/frames before accepting the CTE. The main.cpp also implements a second Twiddle to control the car speed based on difference between the set point speed and current speed. This allows the car to make a safe run around the track. The steering Twiddle turns itself off after running it for 4 times.
+#### Twiddle Implementation and Intgration:
+I added a new member function to PID controller for Twiddler. The main.cpp is altered to integrate the Twiddle algorithm. The main.cpp runs the Twiddle for 4 times to find the optimized value. It also controls the timestep/frames before accepting the CTE. The main.cpp also implements a second Twiddle to control the car speed based on the difference between the set point speed and current speed. This allows the car to make a safe run around the track. The steering Twiddle turns itself off after running it for 4 times.
 
 ![image5](images/Image5.png)
 
