@@ -20,9 +20,9 @@ The udacity's car simulator provides the cross track error (CTE) and the velocit
 Initial valies of PID are imperically found by running the car and manully observering the behavior. The approach for find the values is:
 
 1. First set is to set Ki and Kd values to zero, and only use Kp value until we reach a managable oscillation i.e. car oscillates but stays with the lane for majority of track.
-[![SC2 Video](images/Image1.png)](https://youtu.be/BVALgxNa6v0 "SC2 Mini game - Click to Watch!")
+[![SC2 Video](images/Image2.png)](https://youtu.be/BVALgxNa6v0 "SC2 Mini game - Click to Watch!")
 
-[PID Controller with accepted Kp value](https://youtu.be/BVALgxNa6v0)
+[![PID Controller with accepted Kp value](images/Image1.png)](https://youtu.be/BVALgxNa6v0)
 
 
 2. Second step is to find the Kd(Derivative) value to stop the oscillation.
