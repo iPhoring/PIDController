@@ -28,6 +28,7 @@ The inital values selected for Kp,Ki,Kd are
 [0.08,0.0005,7.5]
 
 ### Twiddle
+An algorithm that is used to optimized the parameters. This was designed by Sebastian Thrun, Udacity. Please see the below video https://www.youtube.com/watch?v=2uQ2BSzDvXs
 
 
 Final Video with tuned PID controller:
