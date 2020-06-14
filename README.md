@@ -9,8 +9,8 @@ PID algorithm consists of three basic coefficients; proportional, integral and d
 
 ### Environment
 The udacity's car simulator provides the cross track error (CTE) and the velocity (mph) in order to compute the appropriate steering angle. the project goal is to use these values are build a PID controller to safely drive the car around the desgined track.
-![image1](images/Image0.png "Udacity Simiulator")
 
+![image1](images/Image0.png "Udacity Simiulator")
 
 #### CTE: is the cross track error flowing into the controller from our car sensors.
 #### Kp, Ki, and Kd are P, I, and D parameters.
