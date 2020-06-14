@@ -9,16 +9,30 @@ PID algorithm consists of three basic coefficients; proportional, integral and d
 ### Environment
 The udacity's car simulator provides the cross track error (CTE) and the velocity (mph) in order to compute the appropriate steering angle. the project goal is to use these values are build a PID controller to safely drive the car around the desgined track.
 
-#### [cte]: is the cross track error fed into the controller from a sensor.
-#### [p_error, i_error, and d_error are proportional, integral and derivative components’ errors respectively].
-Kp, Ki, and Kd are those P, I, and D parameters to be optimized.
+#### CTE: is the cross track error flowing into the controller from our car sensors.
+#### Kp, Ki, and Kd are P, I, and D parameters.
+#### p_error, i_error, and d_error are proportional, integral and derivative components’ errors respectively.
 
 ### Desgin 
-The very 1st step is to find the 
+Initial valies of PID are imperically found by running the car and manully observering the behavior. The approach for find the values is:
+
+1. First set is to set Ki and Kd values to zero, and only use Kp value until we reach a managable oscillation i.e. car oscillates but stays with the lane for majority of track.
+Please see the selected Kp value
+https://youtu.be/BVALgxNa6v0
+
+2. Second step is to find the Kd(Derivative) value to stop the oscillation.
+
+3. Third step is to find a good Ki value to reduce the steady-state error.
+
+The inital values selected for Kp,Ki,Kd are 
+[0.08,0.0005,7.5]
+
+### Twiddle
+
+
+Final Video with tuned PID controller:
 https://youtu.be/n1RdWRtQgYs
 
-
-https://youtu.be/BVALgxNa6v0
 
 ## Basic Build Instructions
 
